@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .alert {
+            margin-left: 38px;
+              position: relative;
+              padding: .75rem 1.25rem;
+              margin-bottom: 1rem;
+              border: 1px solid transparent;
+              border-radius: .25rem;
+              width: 481px;
+              text-align: center;
+          }
+          .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+          }
+          .alert-warning {
+            color: #f1420c;
+            background-color: #FFF7A8;
+            border-color: #ffeeba;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mx-auto">
+            <div class="col-6 border rounded my-3 mx-auto p-2 bg-light">
+                <h2 class="text-center"> Task Management System </h2>
+            </div>
+        </div>
+        <div class="container border border-warning rounded my-2">
+            <h5 class="ml-4 mt-4 text-info"><span> <i class="fa fa-home" aria-hidden="true"></i> Home</span> / 
+            <!--<span class="text-info"><a class="text-dark" href="/computer-specs"> Computer Specs </a> </span></h5>-->
+                    
+            <div class="row mx-auto my-2 p-2">
+                <div class="col-8 border rounded mt-1 mx-auto p-4 bg-light">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">PID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Memory</th>
+                            <th scope="col">CPU</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for pr in processes %}
+                          <tr>
+                            <td class="text" scope="row">{{pr.pid}}</td>
+                            <td class="text">{{pr.name}}</td>
+                            <td class="text">{{pr.status}}</td>
+                            <td class="text">{{pr.mem}} %</td>
+                            <td class="text">{{pr.cpu}} %</td>
+                            <td class=""><a  href="{% url 'demo:kill_process' pr.pid %}" id="{{pr.pid}}" class="btn"><span class="badge badge-primary p-2">KILL</span>
+                            </a>
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+
+
+                    <!-- <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text" scope="col">PID</th>
+                                <th class="text" scope="col">Name</th>
+                                <th class="text" scope="col">Status</th>
+                                <th class="text" scope="col">Memory usage</th>
+                                <th class="text" scope="col">CPU usage</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for pr in processes %}
+                            <tr id="{{pr.pid}}tr">
+                                <td class="text" scope="row">{{pr.pid}}</td>
+                                <td class="text">{{pr.name}}</td>
+                                <td class="text">{{pr.status}}</td>
+                                <td class="text">{{pr.mem}} %</td>
+                                <td class="text">{{pr.cpu}} %</td>
+                                <td class=""><a  href="{% url 'demo:kill_process' pr.pid %}" id="{{pr.pid}}" class="btn"><span class="badge badge-primary p-2">KILL</span>
+                                </a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table> -->
+                </div>
+            </div>
+        </div>
+     
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!--
+    
+    
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mx-auto">
+            <div class="col-6 border rounded my-3 mx-auto p-2 bg-light">
+                <h2 class="text-center"> Titre</h2>
+            </div>
+        </div>
+        <div class="container border border-warning rounded mt-3" style="background-color: rgba(255, 255, 255, 0.794);">
+            <div class="row mx-auto my-2 p-2">
+                <h5 class="text-center"> <a class="text-dark" href="/"><span> <i class="fa fa-home" aria-hidden="true"></i> Home</span></a> / <span class="text-info">Computer Specs</span></h5>
+            </div>
+            <div class="row mx-auto p-2">
+                <div class="col-6">
+                    <h4 class="text-info bg-light border border-primary p-2 rounded text-center"> Hard Disk </h4>
+
+                    <ul class="list-group">
+                        <li class="list-group-item bg-light m-1  d-flex justify-content-between align-items-center">
+                            Total Disk Space
+                            <span class="py-2 badge badge-primary badge-pill">{{disk.total}} GB</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1  d-flex justify-content-between align-items-center">
+                            Used Space
+                            <span class="py-2 badge badge-danger badge-pill">{{disk.used}} GB</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1  d-flex justify-content-between align-items-center">
+                            Free Space
+                            <span class="py-2 badge badge-success badge-pill">{{disk.free}} GB</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1  d-flex justify-content-between align-items-center">
+                            Free Space
+                            <span class="py-2 badge badge-success badge-pill">{{disk.freePercent}} %</span>
+                        </li>
+                    </ul>
+
+                </div>
+                <div cl class="col-6">
+                    <h4 class="text-info bg-light border border-primary p-2 rounded text-center"> CPU </h4>
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                            Used CPU
+                            <span class="py-2 badge badge-danger badge-pill">{{cpu.used}} %</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                            Free CPU
+                            <span class="py-2 badge badge-success badge-pill">{{cpu.free}} %</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                            Number of logical CPU cores
+                            <span class="py-2 badge badge-primary badge-pill">{{cpu.total}}</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                            Number of physical CPU cores
+                            <span class="py-2 badge badge-primary badge-pill">{{cpu.physical}}</span>
+                        </li>
+                        <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                            CPU Max Frequency
+                            <span class="py-2 badge badge-primary badge-pill">{{cpu.freq}} GHz</span>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-6 my-3">
+                    <h4 class="text-info bg-light border border-primary p-2 rounded text-center">RAM</h4>
+                    <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                        Total RAM
+                        <span class="py-2 badge badge-danger badge-pill">{{ram.total}} GB</span>
+                    </li>
+                    <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                        Used RAM
+                        <span class="py-2 badge badge-success badge-pill">{{ram.used}} %</span>
+                    </li>
+                    <li class="list-group-item bg-light m-1 d-flex justify-content-between align-items-center">
+                        Free RAM
+                        <span class="py-2 badge badge-primary badge-pill">{{ram.free}} %</span>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+
+</html>
+
+-->
